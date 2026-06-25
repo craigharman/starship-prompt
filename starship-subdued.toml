@@ -2,7 +2,6 @@
 
 # --- LEFT prompt: subdued Tokyo Night, thin ">" chevron dividers ---
 format = """
-[░▒▓](#2d3250)\
 [  ](bg:#2d3250 fg:#b4bce0)\
 [](fg:#2d3250 bg:#383d5c)\
 $directory\

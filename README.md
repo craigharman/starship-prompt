@@ -44,7 +44,7 @@ The **subdued** variant uses three subtly stepped dark backgrounds so the segmen
 | cwd | `#383d5c` (lightest) | `#aab3d8` steel blue |
 | git | `#283050` (a notch darker than cwd) | branch `#9db58a` · status `#c2a878` |
 
-It keeps the `░▒▓` gradient fade (terminal bg → apple bg), the filled `` Pastel-Powerline dividers, and a seamless closing `` that takes the last segment's colour.
+The segment leads straight in with the apple icon (no gradient block), uses the filled `` Pastel-Powerline dividers, and ends with a seamless closing `` that takes the last segment's colour.
 
 **To use the subdued variant:**
 
