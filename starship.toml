@@ -1,0 +1,191 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# --- LEFT prompt: path + git (Tokyo Night, powerline arrows) ---
+format = """
+[░▒▓](#a3aed2)\
+[  ](bg:#a3aed2 fg:#090c0c)\
+[](bg:#769ff0 fg:#a3aed2)\
+$directory\
+[](fg:#769ff0 bg:#394260)\
+$git_branch\
+$git_status\
+[](fg:#394260)\
+ """
+
+# --- RIGHT prompt: every info module, each a self-contained pill ---
+# Inactive modules render nothing (no empty segment); each active module
+# carries its own left-facing "" divider.
+right_format = """
+$nodejs\
+$bun\
+$deno\
+$python\
+$ruby\
+$rust\
+$golang\
+$java\
+$kotlin\
+$php\
+$dotnet\
+$c\
+$swift\
+$elixir\
+$lua\
+$haskell\
+$julia\
+$scala\
+$perl\
+$zig\
+$dart\
+$package\
+$conda\
+$docker_context\
+$kubernetes\
+$terraform\
+$aws\
+$gcloud\
+$azure\
+$time"""
+
+[directory]
+style = "fg:#e3e5e5 bg:#769ff0"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+style = "bg:#394260"
+format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
+
+[git_status]
+style = "bg:#394260"
+format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
+
+[nodejs]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[bun]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[deno]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[python]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[ruby]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[rust]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[golang]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[java]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[kotlin]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[php]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[dotnet]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[c]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[swift]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[elixir]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[lua]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[haskell]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[julia]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[scala]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[perl]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[zig]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[dart]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol($version) ](fg:#769ff0 bg:#212736)'
+
+[package]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol$version ](fg:#769ff0 bg:#212736)'
+
+[conda]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol$environment ](fg:#769ff0 bg:#212736)'
+
+[docker_context]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol$context ](fg:#769ff0 bg:#212736)'
+
+[kubernetes]
+disabled = false
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol$context ](fg:#769ff0 bg:#212736)'
+
+[terraform]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol$workspace ](fg:#769ff0 bg:#212736)'
+
+[aws]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol$profile ](fg:#769ff0 bg:#212736)'
+
+[gcloud]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol$project ](fg:#769ff0 bg:#212736)'
+
+[azure]
+style = "bg:#212736"
+format = '[](fg:#212736)[ $symbol$subscription ](fg:#769ff0 bg:#212736)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#1d2230"
+format = '[](fg:#1d2230)[ $time ](fg:#a0a9cb bg:#1d2230)'
