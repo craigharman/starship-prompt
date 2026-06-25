@@ -8,9 +8,7 @@ A [Starship](https://starship.rs) prompt based on the **Tokyo Night** colour sch
 - A **blank line** between each command and its output
 - A **transient prompt**: once you submit a command, its prompt collapses to a minimal green `❯ <cmd>` (like powerlevel10k)
 
-```
-░▒▓   ~/Code/personal/starship-prompt   main !?                  v22.22.2   09:24
-```
+![Default (vivid) theme — gradient block, apple icon, blue cwd, and git on the left; clock on the right](screenshot.png)
 
 ---
 
@@ -45,6 +43,8 @@ The **subdued** variant uses three subtly stepped dark backgrounds so the segmen
 | git | `#283050` (a notch darker than cwd) | branch `#9db58a` · status `#c2a878` |
 
 The segment leads straight in with the apple icon (no gradient block), uses the filled `` Pastel-Powerline dividers, and ends with a seamless closing `` that takes the last segment's colour.
+
+![Subdued variant — apple → path → git on the left, time on the right, with a transient `❯ ls` and blank-line spacing](screenshot-subdued.png)
 
 **To use the subdued variant:**
 
