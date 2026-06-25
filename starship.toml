@@ -9,8 +9,7 @@ $directory\
 [](fg:#769ff0 bg:#394260)\
 $git_branch\
 $git_status\
-[](fg:#394260)\
- """
+[](fg:#394260) """
 
 # --- RIGHT prompt: every info module, each a self-contained pill ---
 # Inactive modules render nothing (no empty segment); each active module
